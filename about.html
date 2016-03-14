@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="twelve columns">
+    <div class="blog_post">
+      <img src="images/slide1.jpg" alt="{{labels.about}}" />
+      <h2 class="subheader">{{labels.vision}}</h2>
+      <p>{{page.vision}}</p>
+      <h2 class="subheader">{{labels.mission}}</h2>
+      <ul><li ng-repeat="item in page.mission">{{item}}</li></ul>
+      <h2 class="subheader">{{labels.strength}}</h2>
+      <ul><li ng-repeat="item in page.strength">{{item}}</li></ul>
+      <h2 class="subheader">{{labels.objectives}}</h2>
+      <ul><li ng-repeat="item in page.objectives">{{item}}</li></ul>
+    </div>
+  </div>
+</div>

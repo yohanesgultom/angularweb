@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="twelve columns">
+    <div class="blog_post">
+      <img src="images/slide3.jpg" alt="{{labels.contact}}" />
+      <h3 class="subheader">{{labels.address}}</h3>
+      <p>{{page.contact.name}} <br> {{page.contact.address}} <br> {{labels.phone}} {{page.contact.phone}}</p>
+      <h3 class="subheader">{{labels.email}}</h3>
+      <p><span ng-repeat="item in page.contact.emails"><a href="mailto:{{item}}">{{item}}</a><span ng-hide="$last">, </span></span></p>
+      <h3 class="subheader">{{labels.website}}</h3>
+      <p><a href="{{page.contact.website}}">{{page.contact.website}}</a></p>
+    </div>
+  </div>
+</div>

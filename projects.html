@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="twelve columns">
+    <div class="blog_post">
+      <img src="images/slide2.jpg" alt="{{labels.projects}}" />
+      <h2 class="subheader">{{labels.projects}}</h2>
+      <div ng-repeat="p in page.projects.list">
+          <h5>{{p.title}}</h5>
+          <p ng-show="p.description">{{p.description}}</p>
+      </div>
+      <br>
+      <h3><a name="{{labels.projectExperience}}">{{labels.projectExperience}}</a></h3>
+      <table width="100%" class="responsive">
+        <tr>
+          <th>Client</th>
+          <th>Service</th>
+          <th>Year</th>
+        </tr>
+        <tr ng-repeat="e in page.projects.experience">
+          <td>{{e.customer}}</td>
+          <td>{{e.service}}</td>
+          <td>{{e.year}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

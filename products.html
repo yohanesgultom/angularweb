@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="twelve columns">
+    <div class="blog_post">
+      <img src="images/slide2.jpg" alt="{{labels.products}}" />
+      <h2 class="subheader">{{labels.products}}</h2>
+      <input type="text" placeholder="Type name or brand here" ng-model="search"/>
+      <div ng-repeat="(type, productList) in products" ng-show="(productList|filter:search).length">
+        <h3><a name="{{type}}">{{type}}</a></h3>
+        <table class="responsive" width="100%">
+        	<tr>
+        		<th>Name</th>
+        		<th>Type</th>
+        		<th>Brand</th>
+        		<th>Image</th>
+        	</tr>
+        	<tr ng-repeat="p in productList|filter:search">
+        		<td>{{p.name}}</td>
+        		<td>{{p.type}}</td>
+        		<td>{{p.brand}}</td>
+        		<td><a href="{{p.image}}" data-lightbox="{{p.name}}" data-title="{{p.name}}" ng-show="{{p.image}}">View</a></td>
+        	</tr>
+        </table>
+    </table>
+    </div>
+  </div>
+</div>

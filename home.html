@@ -1,0 +1,64 @@
+      <div class="show-for-large-up">
+        <div class="row">
+          <div class="twelve columns">
+            <div id="featured">
+              <img src="images/slide1.jpg" data-caption="#caption-slide1" alt="{{page.objectives[0]}}" />
+              <img src="images/slide2.jpg" data-caption="#caption-slide2" alt="{{page.objectives[1]}}" />
+              <img src="images/slide3.jpg" data-caption="#caption-slide3" alt="{{page.objectives[2]}}" />
+            </div>
+            <div id="caption-slide1" class="orbit-caption">{{page.objectives[0]}}</div>
+            <div id="caption-slide2" class="orbit-caption">{{page.objectives[1]}}</div>
+            <div id="caption-slide3" class="orbit-caption">{{page.objectives[2]}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three columns">
+          <h3>{{labels.electricals}}</h3>
+          <p><img class="home-icon" src="images/freepik/lightning31.png" alt="{{labels.electricals}}"/> <span ng-repeat="item in page.products.electricals" ng-show="$index < 1">{{item.name}}<span ng-show="item.list"> ({{item.list.join(', ')}})</span><span ng-hide="$last">, </span></span> <a href="#/products/#Electrical">More..</a></p>
+        </div>
+
+        <div class="three columns">
+          <h3>{{labels.mechanicals}}</h3>
+          <p><img class="home-icon" src="images/freepik/gears6.png" alt="{{labels.mechanicals}}"/> <span ng-repeat="item in page.products.mechanicals" ng-show="$index < 2">{{item.name}}<span ng-show="item.list"> ({{item.list.join(', ')}})</span><span ng-hide="$last">, </span></span> <a href="#/products/#Mechanical">More..</a></p>
+        </div>
+
+        <div class="three columns">
+          <h3>{{labels.civilAndStructurals}}</h3>
+          <p><img class="home-icon" src="images/freepik/building33.png" alt="{{labels.civilAndStructurals}}"/> <span ng-repeat="item in page.products.civilAndStructurals" ng-show="$index < 1">{{item.name}}<span ng-show="item.list"> ({{item.list.join(', ')}})</span><span ng-hide="$last">, </span></span> <a href="#/products/#Civil%20and%20Structural">More..</a></p>
+        </div>
+
+        <div class="three columns">
+          <h3>{{labels.itAndTelcoms}}</h3>
+          <p><img class="home-icon" src="images/freepik/wifi42.png" alt="{{labels.itAndTelcoms}}"/> <span ng-repeat="item in page.products.itAndTelcoms">{{item.name}}<span ng-show="item.list"> ({{item.list.join(', ')}})</span><span ng-hide="$last">, </span></span> <a href="#/products/#IT%20and%20Telecom">More..</a></p>
+        </div>
+
+      </div><!-- end row -->
+
+     <hr/>
+
+      <div class="row" style="padding-top: 20px">
+
+        <div class="four columns">
+          <img src="images/demo2_small.jpg" alt="desc" />
+           <h3>{{labels.about}}</h3>
+          <p><em>{{page.vision}} <a href="#/about">More..</a></em></p>
+        </div>
+
+        <div class="four columns">
+          <img src="images/demo3_small.jpg" alt="desc" />
+           <h3>{{labels.projects}}</h3>
+          <p><em><span ng-repeat="item in page.projects.list">{{item.title}}<span ng-hide="$last">, </span></span> <a href="#/projects">More..</a></em></p>
+        </div>
+
+        <div class="four columns">
+          <img src="images/demo1_small.jpg" alt="desc" />
+           <h3>{{labels.contact}}</h3>
+           <p><em>{{page.contact.name + ', ' + page.contact.address + ', ' + page.contact.phone + ', ' + page.contact.emails[0] + ', ' + page.contact.emails[1]}} <a href="#/contact">More..</a></em></p>
+        </div>
+
+      </div><!-- end row -->
+
+    <script src="javascripts/foundation.min.js" type="text/javascript"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script>
